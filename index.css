@@ -532,17 +532,19 @@ html {
         width: 100%;
         max-width: 400px;
         z-index: 10;
-        margin-top: 55vh; /* Position below bags */
+        margin-top: auto; /* Push content to bottom of screen */
+        margin-bottom: 4rem; /* Space before next section */
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .hero-title {
-        font-size: 1.4rem; /* Scaled down slightly to fit better horizontally */
-        line-height: 1.3;
+        font-size: 1.15rem; /* Smaller font size as requested */
+        line-height: 1.4;
         text-align: center;
         margin-bottom: 0.8rem;
+        letter-spacing: 0.5px;
     }
 
     .hero-title br {
@@ -553,7 +555,6 @@ html {
     .hero-title .text-black {
         display: inline; /* Flow inline horizontally */
         margin-bottom: 0;
-        margin-right: 4px; /* Maintain spacing */
     }
 
     .hero-subtitle {
