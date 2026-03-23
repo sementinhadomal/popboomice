@@ -143,7 +143,7 @@ html {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 0 6rem;
+    padding: 10rem 0 0;
     background-image: url('images/hero-bg.png');
     background-size: cover;
     background-position: center;
@@ -159,9 +159,14 @@ html {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     align-items: center; /* This vertically centers the text in the left grid column */
     gap: 4rem;
+}
+
+.hero-content.container {
+    max-width: 1450px; /* Push content further out left/right */
+    margin: 0 auto;
 }
 
 .hero-text {
@@ -173,7 +178,7 @@ html {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-size: clamp(3rem, 6vw, 5.2rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: var(--primary-blue);
@@ -188,8 +193,8 @@ html {
 }
 
 .hero-subtitle {
-    font-size: clamp(1rem, 4vw, 1.25rem);
-    max-width: 500px;
+    font-size: clamp(1.2rem, 4.5vw, 1.5rem);
+    max-width: 550px;
     margin-bottom: 2.5rem;
 }
 
@@ -239,10 +244,11 @@ html {
     background: var(--text-black);
     color: var(--white);
     padding: 1rem 0;
-    margin-top: 4rem;
+    margin-top: auto; /* Push to the very bottom of the flex container */
     overflow: hidden;
     white-space: nowrap;
     display: flex;
+    width: 100%;
 }
 
 .scrolling-text-content {
@@ -541,7 +547,7 @@ html {
         justify-content: flex-end;
         align-items: center;
         width: 100%;
-        padding-bottom: 2rem; /* Safe space at the very bottom */
+        padding-bottom: 3rem; /* Exact spacing from the bottom tape */
     }
 
     .hero-text {
@@ -557,28 +563,28 @@ html {
     }
 
     .hero-title {
-        font-size: 0.95rem; /* Further reduced to fit cleanly inside the natural image sky */
-        line-height: 1.4;
+        font-size: 1.5rem; /* Larger font size as requested in screenshot */
+        line-height: 1.2;
         text-align: center;
-        margin-bottom: 0.8rem;
-        letter-spacing: 0.5px;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0;
     }
 
     .hero-title br {
-        display: none; /* Hide line breaks on mobile for horizontal flow */
+        display: none; /* Hide default breaks */
     }
 
     .hero-title .text-blue,
     .hero-title .text-black {
-        display: inline; /* Flow inline horizontally */
+        display: block; /* Force stacking exactly like the screenshot */
         margin-bottom: 0;
     }
 
     .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-        max-width: 280px;
-        text-align: center; /* Ensure centered */
+        font-size: 0.95rem; /* Match subtitle size clearly */
+        margin-bottom: 1.2rem;
+        max-width: 95%;
+        text-align: center; 
     }
 
     .btn-primary {
