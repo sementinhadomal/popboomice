@@ -134,7 +134,7 @@ html {
 /* Hero Section */
 .hero {
     padding: 10rem 0 6rem;
-    background-image: url('images/hero-bg.png.png');
+    background-image: url('images/hero-bg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
