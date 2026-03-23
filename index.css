@@ -504,28 +504,28 @@ html {
     }
 
     .hero {
-        padding: 0; /* Remove horizontal padding here */
+        padding: 0;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start; /* Changed to start to use margin-top for precise clearing */
         align-items: flex-start;
         text-align: left;
         background-image: url('images/hero-mobile.png');
         background-size: cover; 
-        background-position: center;
+        background-position: center top; /* Ensure bags at top are the anchor */
         background-repeat: no-repeat;
     }
 
     .hero-text {
-        padding: 0 1.5rem; /* Apply padding only to the text */
+        padding: 0 1.5rem;
         max-width: 320px;
         z-index: 10;
-        margin-top: 20%; 
+        margin-top: 45vh; /* Push text below the bags */
     }
 
     .hero-title {
-        font-size: 2.3rem; /* Increased for impact */
+        font-size: 1.8rem; /* Slightly reduced */
         line-height: 1.1;
         text-align: left;
         margin-bottom: 0.8rem;
