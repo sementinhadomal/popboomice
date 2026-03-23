@@ -457,7 +457,9 @@ html {
     }
 
     .logo-img {
-        height: 85px;
+        height: 100px; /* Slightly larger */
+        max-width: 55vw; /* Prevent collision with nav icons */
+        object-fit: contain;
     }
 
     .hamburger {
