@@ -515,10 +515,11 @@ html {
 
     .hero {
         padding: 0;
-        min-height: 100vh;
+        min-height: 100vh; /* Changed from 100v to 100dvh for better mobile fit if possible, but 100vh is safer base */
+        height: 100vh; /* Ensure no overflow */
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: flex-end; /* Push content to bottom */
         align-items: center; /* Center horizontally */
         text-align: center; /* Center text */
         background-image: url('images/hero-mobile.png');
@@ -527,20 +528,29 @@ html {
         background-repeat: no-repeat;
     }
 
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 4rem; /* Safe space at the very bottom */
+    }
+
     .hero-text {
         padding: 0 1.5rem;
         width: 100%;
         max-width: 400px;
         z-index: 10;
-        margin-top: auto; /* Push content to bottom of screen */
-        margin-bottom: 4rem; /* Space before next section */
+        margin-top: 0; /* Clear previous values */
+        margin-bottom: 0; /* Clear previous values */
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .hero-title {
-        font-size: 1.15rem; /* Smaller font size as requested */
+        font-size: 1.05rem; /* Force a much smaller font size to fit correctly */
         line-height: 1.4;
         text-align: center;
         margin-bottom: 0.8rem;
