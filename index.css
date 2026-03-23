@@ -104,7 +104,7 @@ html {
 }
 
 .logo-img {
-    height: 100px;
+    height: 150px;
     width: auto;
     transition: var(--transition);
 }
@@ -160,8 +160,15 @@ html {
 .hero-content {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
-    align-items: center;
+    align-items: center; /* This vertically centers the text in the left grid column */
     gap: 4rem;
+}
+
+.hero-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .hero-title {
@@ -443,7 +450,7 @@ html {
     }
 
     .logo-img {
-        height: 60px;
+        height: 85px;
     }
 
     .hamburger {
@@ -515,15 +522,16 @@ html {
 
     .hero {
         padding: 0;
-        min-height: 100vh; /* Changed from 100v to 100dvh for better mobile fit if possible, but 100vh is safer base */
-        height: 100vh; /* Ensure no overflow */
+        min-height: 100vh; 
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-end; /* Push content to bottom */
-        align-items: center; /* Center horizontally */
-        text-align: center; /* Center text */
+        align-items: center; 
+        text-align: center; 
+        background-color: #8cc6f1; /* Solid sky blue for the lower safe zone */
         background-image: url('images/hero-mobile.png');
-        background-size: cover; 
+        background-size: 100% auto; /* Image scales by width, won't overlap bottom text */
         background-position: center top; 
         background-repeat: no-repeat;
     }
@@ -534,7 +542,7 @@ html {
         justify-content: flex-end;
         align-items: center;
         width: 100%;
-        padding-bottom: 4rem; /* Safe space at the very bottom */
+        padding-bottom: 2rem; /* Safe space at the very bottom */
     }
 
     .hero-text {
@@ -542,8 +550,8 @@ html {
         width: 100%;
         max-width: 400px;
         z-index: 10;
-        margin-top: 0; /* Clear previous values */
-        margin-bottom: 0; /* Clear previous values */
+        margin-top: 0; 
+        margin-bottom: 0; 
         display: flex;
         flex-direction: column;
         align-items: center;
