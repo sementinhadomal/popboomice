@@ -189,6 +189,7 @@
             let particles = [];
             const popcornImg = new Image();
             popcornImg.src = 'images/popcorn_particle.png';
+            const processedPopcornCanvas = document.createElement('canvas');
             
             function resize() {
                 canvas.width = window.innerWidth;
@@ -229,11 +230,14 @@
                     if (this.isPopcorn) {
                         ctx.translate(this.x, this.y);
                         ctx.rotate(this.rotation);
-                        ctx.drawImage(popcornImg, -this.size/2, -this.size/2, this.size, this.size);
+                        // Use the processed canvas without white background
+                        ctx.drawImage(processedPopcornCanvas, -this.size/2, -this.size/2, this.size, this.size);
                     } else {
                         ctx.beginPath();
                         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                         ctx.fillStyle = 'white';
+                        ctx.shadowBlur = 5;
+                        ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
                         ctx.fill();
                     }
                     ctx.restore();
@@ -241,9 +245,27 @@
             }
 
             function init() {
+                // Remove white background from popcorn image
+                processedPopcornCanvas.width = popcornImg.width;
+                processedPopcornCanvas.height = popcornImg.height;
+                const pCtx = processedPopcornCanvas.getContext('2d');
+                pCtx.drawImage(popcornImg, 0, 0);
+                const imageData = pCtx.getImageData(0, 0, processedPopcornCanvas.width, processedPopcornCanvas.height);
+                const data = imageData.data;
+                for (let i = 0; i < data.length; i += 4) {
+                    // If pixel is close to white, make it transparent
+                    if (data[i] > 240 && data[i+1] > 240 && data[i+2] > 240) {
+                        data[i+3] = 0; 
+                    } else if (data[i] > 220 && data[i+1] > 220 && data[i+2] > 220) {
+                        // Anti-aliasing edge softening
+                        data[i+3] = 100;
+                    }
+                }
+                pCtx.putImageData(imageData, 0, 0);
+
                 // Populate particles
-                for (let i = 0; i < 25; i++) particles.push(new Particle(true)); // Popcorn
-                for (let i = 0; i < 50; i++) particles.push(new Particle(false)); // Ice/Snow
+                for (let i = 0; i < 20; i++) particles.push(new Particle(true)); // Popcorn
+                for (let i = 0; i < 80; i++) particles.push(new Particle(false)); // Ice/Snow
                 animate();
                 
                 // Gradually stop/fade out after 8 seconds

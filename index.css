@@ -518,39 +518,49 @@ html {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* Changed to start to use margin-top for precise clearing */
-        align-items: flex-start;
-        text-align: left;
+        justify-content: flex-start;
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Center text */
         background-image: url('images/hero-mobile.png');
         background-size: cover; 
-        background-position: center top; /* Ensure bags at top are the anchor */
+        background-position: center top; 
         background-repeat: no-repeat;
     }
 
     .hero-text {
         padding: 0 1.5rem;
-        max-width: 320px;
+        width: 100%;
+        max-width: 400px;
         z-index: 10;
-        margin-top: 60vh; /* Pushes text further down to clear the bags */
+        margin-top: 55vh; /* Position below bags */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-title {
-        font-size: 1.6rem; /* Reduced to fit better below imagery */
-        line-height: 1.1;
-        text-align: left;
+        font-size: 1.4rem; /* Scaled down slightly to fit better horizontally */
+        line-height: 1.3;
+        text-align: center;
         margin-bottom: 0.8rem;
+    }
+
+    .hero-title br {
+        display: none; /* Hide line breaks on mobile for horizontal flow */
     }
 
     .hero-title .text-blue,
     .hero-title .text-black {
-        display: block;
+        display: inline; /* Flow inline horizontally */
         margin-bottom: 0;
+        margin-right: 4px; /* Maintain spacing */
     }
 
     .hero-subtitle {
-        font-size: 1rem; /* Slightly larger */
+        font-size: 1rem;
         margin-bottom: 1.5rem;
-        max-width: 250px;
+        max-width: 280px;
+        text-align: center; /* Ensure centered */
     }
 
     .btn-primary {
