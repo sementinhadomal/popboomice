@@ -167,6 +167,7 @@ html {
 .hero-content.container {
     max-width: 1450px; /* Push content further out left/right */
     margin: 0 auto;
+    margin-bottom: 6rem; /* Keeps button away from scrolling bar */
 }
 
 .hero-text {
@@ -178,7 +179,7 @@ html {
 
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 6vw, 5.2rem);
+    font-size: clamp(2.5rem, 5vw, 4rem);
     line-height: 1.1;
     margin-bottom: 1.5rem;
     color: var(--primary-blue);
@@ -193,8 +194,8 @@ html {
 }
 
 .hero-subtitle {
-    font-size: clamp(1.2rem, 4.5vw, 1.5rem);
-    max-width: 550px;
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+    max-width: 500px;
     margin-bottom: 2.5rem;
 }
 
@@ -542,12 +543,17 @@ html {
     }
 
     .hero-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        width: 100%;
-        padding-bottom: 3rem; /* Exact spacing from the bottom tape */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-end !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-top: auto !important; /* Force this block to absorb available space and push downwards */
+        padding-bottom: 3rem !important; /* Exact spacing from the bottom tape */
+    }
+
+    .scrolling-text {
+        margin-top: 0 !important; /* Reset the manual desktop edit that broke mobile flex flow */
     }
 
     .hero-text {
@@ -592,15 +598,7 @@ html {
         font-size: 0.75rem;
     }
 
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .hero-text {
-        order: 2;
-        padding: 0 1rem;
-    }
+    /* Removed duplicate CSS block for .hero-content and .hero-text */
     
     .hero-image-wrapper {
         order: 1;
