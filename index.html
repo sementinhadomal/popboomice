@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <canvas id="popcorn-canvas"></canvas>
     <header class="header">
         <div class="announcement-bar">
             <span>FRETE GRÁTIS EM PEDIDOS ACIMA DE R$150</span>
@@ -180,6 +181,95 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Falling Frozen Popcorn Animation
+        (function() {
+            const canvas = document.getElementById('popcorn-canvas');
+            const ctx = canvas.getContext('2d');
+            let particles = [];
+            const popcornImg = new Image();
+            popcornImg.src = 'images/popcorn_particle.png';
+            
+            function resize() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            class Particle {
+                constructor(isPopcorn) {
+                    this.isPopcorn = isPopcorn;
+                    this.reset();
+                    // Initial random Y to spread them out at start
+                    this.y = Math.random() * -canvas.height;
+                }
+                reset() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = -50 - Math.random() * 200;
+                    this.size = this.isPopcorn ? (Math.random() * 30 + 20) : (Math.random() * 4 + 2);
+                    this.speedY = this.isPopcorn ? (Math.random() * 2 + 1.5) : (Math.random() * 3 + 2);
+                    this.speedX = Math.random() * 2 - 1;
+                    this.rotation = Math.random() * Math.PI * 2;
+                    this.rotationSpeed = (Math.random() - 0.5) * 0.05;
+                    this.opacity = this.isPopcorn ? 1 : Math.random() * 0.5 + 0.3;
+                }
+                update() {
+                    this.y += this.speedY;
+                    this.x += Math.sin(this.y * 0.01) + this.speedX;
+                    if (this.isPopcorn) this.rotation += this.rotationSpeed;
+                    
+                    if (this.y > canvas.height + 50) {
+                        this.reset();
+                    }
+                }
+                draw() {
+                    ctx.save();
+                    ctx.globalAlpha = this.opacity;
+                    if (this.isPopcorn) {
+                        ctx.translate(this.x, this.y);
+                        ctx.rotate(this.rotation);
+                        ctx.drawImage(popcornImg, -this.size/2, -this.size/2, this.size, this.size);
+                    } else {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                        ctx.fillStyle = 'white';
+                        ctx.fill();
+                    }
+                    ctx.restore();
+                }
+            }
+
+            function init() {
+                // Populate particles
+                for (let i = 0; i < 25; i++) particles.push(new Particle(true)); // Popcorn
+                for (let i = 0; i < 50; i++) particles.push(new Particle(false)); // Ice/Snow
+                animate();
+                
+                // Gradually stop/fade out after 8 seconds
+                setTimeout(() => {
+                    canvas.style.transition = 'opacity 3s ease';
+                    canvas.style.opacity = '0';
+                    setTimeout(() => {
+                        particles = [];
+                        canvas.remove();
+                    }, 3000);
+                }, 8000);
+            }
+
+            function animate() {
+                if (!particles.length) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+
+            popcornImg.onload = init;
+        })();
+    </script>
     <script>
         // Intersection Observer for Fade-in and Background Color changes
         const productsSection = document.querySelector('.products');

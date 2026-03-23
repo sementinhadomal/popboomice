@@ -29,6 +29,16 @@ body {
     position: relative;
 }
 
+#popcorn-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
+}
+
 html {
     overflow-x: hidden;
     width: 100%;
@@ -521,11 +531,11 @@ html {
         padding: 0 1.5rem;
         max-width: 320px;
         z-index: 10;
-        margin-top: 45vh; /* Push text below the bags */
+        margin-top: 60vh; /* Pushes text further down to clear the bags */
     }
 
     .hero-title {
-        font-size: 1.8rem; /* Slightly reduced */
+        font-size: 1.6rem; /* Reduced to fit better below imagery */
         line-height: 1.1;
         text-align: left;
         margin-bottom: 0.8rem;
