@@ -526,12 +526,11 @@ html {
         height: 100vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end; /* Push content to bottom */
+        justify-content: flex-end;
         align-items: center; 
         text-align: center; 
-        background-color: #8cc6f1; /* Solid sky blue for the lower safe zone */
         background-image: url('images/hero-mobile.png');
-        background-size: 100% auto; /* Image scales by width, won't overlap bottom text */
+        background-size: cover; /* Fill the whole area without solid color gaps */
         background-position: center top; 
         background-repeat: no-repeat;
     }
@@ -558,7 +557,7 @@ html {
     }
 
     .hero-title {
-        font-size: 1.05rem; /* Force a much smaller font size to fit correctly */
+        font-size: 0.95rem; /* Further reduced to fit cleanly inside the natural image sky */
         line-height: 1.4;
         text-align: center;
         margin-bottom: 0.8rem;
