@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Boom Ice | Pipoca com Proteína, Elevada</title>
+    <meta name="description" content="Ingredientes reais, sabores ousados e 7g de proteína por porção. O lanche melhorado da Pop Boom Ice.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="announcement-bar">
+            <span>FRETE GRÁTIS EM PEDIDOS ACIMA DE R$150</span>
+        </div>
+        <nav class="nav">
+            <div class="nav-container container">
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <div class="nav-links left">
+                    <a href="#produtos">PRODUTOS</a>
+                    <a href="#marca">NOSSA MARCA</a>
+                </div>
+                <div class="nav-logo">
+                    <img src="images/logo-definitiva.png.png" alt="Pop Boom Ice Logo" class="logo-img">
+                </div>
+                <div class="nav-links right">
+                    <a href="#instagram">INSTAGRAM</a>
+                    <a href="#" class="cart-icon">🛒 (0)</a>
+                </div>
+                
+                <!-- Mobile only cart -->
+                <div class="nav-cart-mobile">
+                    <a href="#" class="cart-icon">🛒</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content container">
+                <div class="hero-text" data-aos="fade-up">
+                    <h1 class="hero-title">
+                        <span class="text-blue">PIPOCA COM<br>PROTEÍNA,</span><br>
+                        <span class="text-black">O LANCE<br>EVOLUIU</span>
+                    </h1>
+                    <p class="hero-subtitle">Ingredientes reais, sabores intensos e 7g de proteína por porção.</p>
+                    <a href="#produtos" class="btn btn-primary">COMPRAR AGORA</a>
+                </div>
+                <div class="hero-image-wrapper" data-aos="fade-left">
+                    <!-- Imagem movida para o CSS como background -->
+                </div>
+            </div>
+            <div class="scrolling-text">
+                <div class="scrolling-text-content">
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="14" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">7G</text></svg><span>7G PROTEÍNA</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="13" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">GF</text></svg><span>ZERO GLÚTEN</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span>SEM ÓLEO DE SEMENTES</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span>100% NATURAL</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="14" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">7G</text></svg><span>7G PROTEÍNA</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="13" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">GF</text></svg><span>ZERO GLÚTEN</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span>SEM ÓLEO DE SEMENTES</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span>100% NATURAL</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="14" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">7G</text></svg><span>7G PROTEÍNA</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="13" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">GF</text></svg><span>ZERO GLÚTEN</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span>SEM ÓLEO DE SEMENTES</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span>100% NATURAL</span></div>
+                </div>
+                <div class="scrolling-text-content" aria-hidden="true">
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="14" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">7G</text></svg><span>7G PROTEÍNA</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="13" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">GF</text></svg><span>ZERO GLÚTEN</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span>SEM ÓLEO DE SEMENTES</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span>100% NATURAL</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="14" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">7G</text></svg><span>7G PROTEÍNA</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="13" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">GF</text></svg><span>ZERO GLÚTEN</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span>SEM ÓLEO DE SEMENTES</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span>100% NATURAL</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="14" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">7G</text></svg><span>7G PROTEÍNA</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><text x="50%" y="54%" font-family="var(--font-heading)" font-weight="900" font-size="13" text-anchor="middle" dominant-baseline="central" fill="currentColor" stroke="none">GF</text></svg><span>ZERO GLÚTEN</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><span>SEM ÓLEO DE SEMENTES</span></div>
+                    <div class="scroll-item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span>100% NATURAL</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase Section -->
+        <section id="produtos" class="products">
+            <div class="container">
+                <h2 class="section-title">ESCOLHA SEU SABOR</h2>
+                <div class="product-grid">
+                    <!-- Churros -->
+                    <div class="product-card flavor-churros">
+                        <div class="product-image-container">
+                            <img src="images/churros.jpg.jpeg" alt="Pop Boom Ice Churros">
+                        </div>
+                        <h3>Churros</h3>
+                        <p>O doce clássico com o toque de proteína.</p>
+                        <span class="price">R$ 14,90</span>
+                        <button class="btn btn-secondary">ADICIONAR</button>
+                    </div>
+                    <!-- Leite em Po -->
+                    <div class="product-card flavor-leite">
+                        <div class="product-image-container">
+                            <img src="images/leite-em-po.jpg.jpeg" alt="Pop Boom Ice Leite em Pó">
+                        </div>
+                        <h3>Leite em Pó</h3>
+                        <p>A cremosidade que você já ama, agora em pipoca.</p>
+                        <span class="price">R$ 14,90</span>
+                        <button class="btn btn-secondary">ADICIONAR</button>
+                    </div>
+                    <!-- Cookies n Cream -->
+                    <div class="product-card flavor-cookies">
+                        <div class="product-image-container">
+                            <img src="images/cookies-n-cream.jpg.jpeg" alt="Pop Boom Ice Cookies n Cream">
+                        </div>
+                        <h3>Cookies n Cream</h3>
+                        <p>O equilíbrio perfeito entre o chocolate e o leite.</p>
+                        <span class="price">R$ 14,90</span>
+                        <button class="btn btn-secondary">ADICIONAR</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand/Values Section -->
+        <section id="marca" class="brand-values">
+            <div class="container">
+                <div class="values-grid">
+                    <div class="value-item">
+                        <span class="value-icon">💪</span>
+                        <h4>7g de Proteína</h4>
+                        <p>Energia limpa para o seu dia.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">🌿</span>
+                        <h4>Ingredientes Reais</h4>
+                        <p>Sem conservantes ou corantes artificiais.</p>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-icon">🚫</span>
+                        <h4>Zero Glúten</h4>
+                        <p>Seguro e delicioso para todos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo-definitiva.png.png" alt="Pop Boom Ice Logo">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                    <a href="#">Contato</a>
+                </div>
+                <div id="instagram" class="footer-social">
+                    <a href="https://instagram.com/popboom" target="_blank" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Pop Boom Ice. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Intersection Observer for Fade-in and Background Color changes
+        const productsSection = document.querySelector('.products');
+        
+        const observerOptions = {
+            threshold: 0.4 // Trigger when 40% of the card is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add fade-in class
+                    entry.target.classList.add('visible');
+                    
+                    // Handle background color change
+                    const flavorClass = [...entry.target.classList].find(cls => cls.startsWith('flavor-'));
+                    if (flavorClass) {
+                        const colorType = flavorClass.replace('flavor-', '');
+                        // Remove previous bg classes
+                        productsSection.classList.remove('bg-churros', 'bg-leite', 'bg-cookies');
+                        // Add new one
+                        productsSection.classList.add(`bg-${colorType}`);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
